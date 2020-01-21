@@ -60,6 +60,7 @@ const bottomButtons = document.querySelectorAll('.btn');
 bottomButtons.forEach(buttons => {
     buttons.addEventListener('click', (event) => {
         event.target.style.color = 'red';
+        console.log('target', event.target);
     });
 });
 
