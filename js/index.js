@@ -1,3 +1,13 @@
+//get logo-heading
+const topLogo = document.querySelector('.logo-heading');
+//console.log(topLogo);
+    topLogo.addEventListener('click', () => { topLogo.style.transform = 'rotateY(70deg)';
+    }); 
+    topLogo.addEventListener('dblClick', () => { topLogo.style.transform = 'initial';
+    });
+    
+
+
 //get all .nav a elements
 const newNav = document.querySelectorAll('.nav a');
 //console.log(newNav);
