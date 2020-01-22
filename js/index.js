@@ -70,10 +70,12 @@ const massImg = document.querySelectorAll('.img-content');
 // Moves images around on the page using dragend & dragstart event listner
 massImg.forEach(element => {
     element.addEventListener('dragstart', (event) => {
-        event.target.style.transform = 'translate(7rem,0)';
+        event.target.style.transform = 'translate(5rem,0)';
+        event.stopPropagation();
     });
     element.addEventListener('dragend', (event) => {
-        event.target.style.transform = 'translate(-7rem,0)';
+        event.target.style.transform = 'translate(-5rem,0)';
+        event.stopPropagation();
     });
 });
 
@@ -96,5 +98,7 @@ navBar.forEach(element => {
     element.addEventListener('click', (event) => {
         event.preventDefault();
         console.log('Prevented!');
+        event.stopPropagation();
+        console.log('Stopped!')
     });
 });
